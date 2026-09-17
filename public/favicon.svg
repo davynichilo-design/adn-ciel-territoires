@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44">
+  <path d="M20 1 38 8v14c0 12-8 18.5-18 21C10 40.5 2 34 2 22V8Z" fill="#1B2A6B"/>
+  <path d="M20 1 38 8v14c0 12-8 18.5-18 21C10 40.5 2 34 2 22V8Z" fill="none" stroke="#A9812F" stroke-width="1.4"/>
+  <text x="20" y="26" font-family="Georgia, serif" font-weight="700" font-size="13" fill="#fff" text-anchor="middle">ADN</text>
+</svg>

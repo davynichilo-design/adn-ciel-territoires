@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact"
+  description="Présentez votre projet de spectacle de drones. La prise de contact ne vaut ni validation de faisabilité, ni engagement contractuel."
+  path="/contact/"
+>
+  <section class="hero" style="padding-block: clamp(2.5rem, 4vw, 4rem);">
+    <div class="container container--narrow text-center">
+      <p class="badge" style="justify-content: center;">Contact</p>
+      <h1>Échanger sur votre projet</h1>
+      <p class="lede" style="margin-inline: auto;">
+        Décrivez-nous votre projet en quelques lignes : nous revenons vers vous pour évaluer
+        ensemble l'accompagnement envisageable.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container container--narrow">
+      <!--
+        Formulaire statique : à connecter à un service d'envoi (ex. Formspree,
+        ou une fonction serverless Vercel) une fois l'adresse e-mail de
+        réception confirmée. Voir README.md, section "Formulaire de contact".
+      -->
+      <div class="card" style="padding: clamp(1.5rem, 3vw, 2.5rem);">
+      <form class="form-grid" method="POST" action="#" data-contact-form>
+        <div class="field">
+          <label for="nom">Nom et prénom</label>
+          <input type="text" id="nom" name="nom" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="collectivite">Collectivité ou organisme</label>
+          <input type="text" id="collectivite" name="collectivite" required />
+        </div>
+        <div class="field">
+          <label for="fonction">Fonction</label>
+          <input type="text" id="fonction" name="fonction" required />
+        </div>
+        <div class="field">
+          <label for="email">Courriel professionnel</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="telephone">
+            Téléphone <span class="hint">(facultatif)</span>
+          </label>
+          <input type="tel" id="telephone" name="telephone" autocomplete="tel" />
+        </div>
+        <div class="field">
+          <label for="territoire">Commune ou territoire concerné</label>
+          <input type="text" id="territoire" name="territoire" required />
+        </div>
+        <div class="field field--full">
+          <label for="periode">Date ou période envisagée</label>
+          <input type="text" id="periode" name="periode" placeholder="Ex. : juillet 2027, fête nationale, etc." />
+        </div>
+        <div class="field field--full">
+          <label for="description">Description synthétique du projet</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
+        <div class="field field--full">
+          <label class="consent" for="consentement">
+            <input type="checkbox" id="consentement" name="consentement" required />
+            <span>
+              J'accepte que les informations transmises via ce formulaire soient utilisées
+              dans le cadre de ma demande, conformément à la
+              <a href="/politique-confidentialite/">politique de confidentialité</a>.
+            </span>
+          </label>
+        </div>
+        <div class="field field--full">
+          <button type="submit" class="button button--primary">Envoyer ma demande</button>
+        </div>
+      </form>
+
+      <p class="form-note">
+        La prise de contact ne vaut ni validation de faisabilité, ni engagement contractuel.
+      </p>
+      </div>
+    </div>
+  </section>
+</Layout>

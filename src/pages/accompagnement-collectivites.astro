@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Accompagnement des collectivités"
+  description="Qualification du besoin, recherche d'opérateurs, vérification préliminaire et comparatif structuré : le contenu de l'accompagnement proposé aux collectivités."
+  path="/accompagnement-collectivites/"
+>
+  <!-- 1. Intro -->
+  <section class="hero" style="padding-block: clamp(2.5rem, 4vw, 4rem);">
+    <div class="container container--narrow text-center">
+      <p class="badge" style="justify-content: center;">Accompagnement des collectivités</p>
+      <h1>Comment nous accompagnons votre collectivité</h1>
+      <p class="lede" style="margin-inline: auto;">
+        Une mairie ou une collectivité qui envisage un spectacle de drones fait face à un
+        marché technique encore peu connu. Notre rôle est de vous aider à qualifier votre
+        besoin, rechercher des opérateurs adaptés et comparer leurs propositions selon des
+        critères objectifs.
+      </p>
+      <div class="button-row" style="margin-top: 1.8rem; justify-content: center;">
+        <a href="/contact/" class="button button--primary">Étudier mon projet</a>
+        <a href="#contenu-accompagnement" class="button button--secondary">Voir le contenu détaillé</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Pour qui -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="max-width: 62ch; margin-inline: auto;">
+        <p class="badge">Public concerné</p>
+        <h2>Pour qui ?</h2>
+        <p class="lede" style="margin-inline: auto;">
+          Chaque interlocuteur trouve dans notre dossier les éléments qui répondent à ses
+          préoccupations propres.
+        </p>
+      </div>
+
+      <div class="grid grid--4" style="margin-top: 2.5rem;">
+        <div class="text-center">
+          <div class="icon-circle">
+            <span class="icon-circle__inner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="2"/>
+                <path d="M3 9h18"/>
+                <path d="M8 3v4M16 3v4"/>
+              </svg>
+            </span>
+          </div>
+          <h4>Services événementiels et culturels</h4>
+        </div>
+        <div class="text-center">
+          <div class="icon-circle">
+            <span class="icon-circle__inner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 10l9-6 9 6"/>
+                <path d="M4 21h16"/>
+                <path d="M6 21V10M10 21V10M14 21V10M18 21V10"/>
+              </svg>
+            </span>
+          </div>
+          <h4>Directions générales</h4>
+        </div>
+        <div class="text-center">
+          <div class="icon-circle">
+            <span class="icon-circle__inner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/>
+                <path d="M8 12h8M8 16h8M8 8h4"/>
+              </svg>
+            </span>
+          </div>
+          <h4>Services commande publique</h4>
+        </div>
+        <div class="text-center">
+          <div class="icon-circle">
+            <span class="icon-circle__inner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </span>
+          </div>
+          <h4>Services sécurité</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Ce que comprend l'accompagnement -->
+  <section class="section section--tint" id="contenu-accompagnement">
+    <div class="container">
+      <div class="text-center" style="max-width: 62ch; margin-inline: auto;">
+        <p class="badge">Contenu du forfait</p>
+        <h2>Ce que comprend l'accompagnement</h2>
+        <p class="lede" style="margin-inline: auto;">
+          Cinq étapes structurées, du premier échange jusqu'au comparatif remis à votre
+          collectivité.
+        </p>
+      </div>
+
+      <div class="steps steps--3col" style="margin-top: 2.5rem;">
+        <div class="steps__item">
+          <h4>Qualification du besoin</h4>
+          <p>Date, lieu, budget, objectifs, contraintes.</p>
+        </div>
+        <div class="steps__item">
+          <h4>Premier examen des contraintes évidentes du site</h4>
+          <p>Il ne s'agit pas d'une étude réglementaire exhaustive.</p>
+        </div>
+        <div class="steps__item">
+          <h4>Recherche d'opérateurs adaptés au projet</h4>
+          <p>Une sélection ciblée en fonction des caractéristiques de votre événement.</p>
+        </div>
+        <div class="steps__item">
+          <h4>Vérification préliminaire des éléments communiqués</h4>
+          <p>Références, assurances, organisation.</p>
+        </div>
+        <div class="steps__item">
+          <h4>Remise d'un comparatif structuré</h4>
+          <p>Une lecture claire pour éclairer votre décision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Ce que ça ne comprend pas + tarif -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Ce que cet accompagnement ne comprend pas</h2>
+      <p>
+        Une analyse réglementaire exhaustive (type SORA), la responsabilité d'exploitant, ou
+        la garantie d'obtention des autorisations : ces éléments relèvent de l'opérateur
+        retenu, éventuellement accompagné séparément.
+      </p>
+
+      <div class="callout" style="margin-top: 2rem;">
+        <p style="margin: 0 0 1rem;">
+          <strong style="color: var(--navy);">Forfait Présélection Spectacle Drone</strong>
+          — 490&nbsp;€ HT
+        </p>
+        <a href="/contact/" class="button button--primary">Étudier mon projet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CTA -->
+  <section class="section section--navy">
+    <div class="container text-center" style="max-width: 62ch; margin-inline: auto;">
+      <h2>Prêt à qualifier votre projet ?</h2>
+      <p style="color: #c3d6e6;">
+        Présentez-nous votre projet pour évaluer, ensemble, l'accompagnement envisageable.
+      </p>
+      <a href="/contact/" class="button button--on-navy" style="margin-top: 1rem;">Présenter votre projet</a>
+    </div>
+  </section>
+</Layout>
