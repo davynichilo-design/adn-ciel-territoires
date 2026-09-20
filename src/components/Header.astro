@@ -9,7 +9,6 @@ const links = [
   { href: '/accompagnement-collectivites/', label: 'Accompagnement' },
   { href: '/methode-engagements/', label: 'Méthode et engagements' },
   { href: '/a-propos/', label: 'À propos' },
-  { href: '/contact/', label: 'Contact' },
 ];
 
 const isCurrent = (href: string) =>
@@ -44,7 +43,6 @@ const isCurrent = (href: string) =>
     </button>
 
     <nav class="nav" id="site-nav" aria-label="Navigation principale">
-      <a href="/contact/" class="button button--primary">Étudier mon projet</a>
       <ul class="nav__list">
         {links.map((link) => (
           <li>
@@ -54,6 +52,7 @@ const isCurrent = (href: string) =>
           </li>
         ))}
       </ul>
+      <a href="/contact/" class="button button--primary">Étudier mon projet</a>
     </nav>
   </div>
 </header>

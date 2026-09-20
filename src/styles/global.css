@@ -94,7 +94,7 @@ a {
   color: var(--gold-ink);
   text-underline-offset: 0.15em;
 }
-a:hover { color: var(--navy); }
+a:hover:not(.button) { color: var(--navy); }
 
 img { max-width: 100%; display: block; }
 
