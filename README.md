@@ -94,29 +94,16 @@ Si le domaine définitif diffère de `adncielterritoires.fr`, pensez à mettre �
 - Un seul `<h1>` par page, hiérarchie `h2`/`h3` cohérente.
 - Pensez à soumettre le sitemap à Google Search Console une fois le domaine en ligne.
 
-## Formulaire de contact — à connecter
+## Formulaire de contact
 
-Le formulaire de la page `/contact/` est actuellement **statique** : il ne fait qu'afficher
-les champs prévus, il n'envoie encore aucune donnée nulle part (aucune adresse e-mail de
-réception n'était disponible au moment de la construction).
+Le formulaire de la page `/contact/` est un formulaire [Tally](https://tally.so) intégré en
+iframe dans `src/pages/contact.astro`. Les réponses arrivent directement dans votre
+tableau de bord Tally (et peuvent être redirigées par e-mail depuis les réglages du
+formulaire sur tally.so).
 
-Pour le rendre fonctionnel, deux options simples :
-
-**Option A — service tiers (le plus rapide)**
-Créez un compte sur [Formspree](https://formspree.io) (ou équivalent), puis remplacez dans
-`src/pages/contact.astro` :
-```html
-<form class="form-grid" method="POST" action="#" data-contact-form>
-```
-par :
-```html
-<form class="form-grid" method="POST" action="https://formspree.io/f/VOTRE_ID">
-```
-
-**Option B — fonction serverless Vercel**
-Créez `api/contact.ts` à la racine du projet et pointez le formulaire vers `/api/contact` ;
-Vercel déploie automatiquement les fonctions du dossier `api/`. Cette option permet
-d'envoyer l'e-mail directement depuis votre propre domaine (ex. via Resend, SendGrid...).
+Pour modifier les champs du formulaire, éditez-le directement sur tally.so — aucune
+modification du code n'est nécessaire tant que l'identifiant du formulaire
+(`KYXOvX` dans l'URL `data-tally-src`) reste le même.
 
 ## Contenu encore à compléter
 
