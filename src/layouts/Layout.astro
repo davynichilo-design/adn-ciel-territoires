@@ -65,6 +65,16 @@ const structuredData = {
 
     <!-- Données structurées (schema.org) -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M7DVQDSZ68"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M7DVQDSZ68');
+    </script>
   </head>
   <body>
     <a href="#contenu" class="skip-link">Aller au contenu principal</a>
