@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.adncielterritoires.fr/sitemap-index.xml
+Sitemap: https://www.adn-ciel-territoire.fr/sitemap-index.xml
