@@ -168,23 +168,7 @@ import Layout from '../layouts/Layout.astro';
         responsabilités d'exploitant, notamment l'obtention des autorisations.
       </p>
 
-      <!-- Décoratif : les mêmes informations figurent en clair dans le bloc ci-dessous -->
-      <div class="offer-banner" aria-hidden="true">
-        <div class="offer-banner__track">
-          {[0, 1].map(() => (
-            <span class="offer-banner__group">
-              <span>Offre de lancement 2026 — 490&nbsp;€ HT</span>
-              <span>Abonnement annuel</span>
-              <span>14 juillet et Nouvel An</span>
-              <span>Offre de lancement 2026 — 490&nbsp;€ HT</span>
-              <span>Abonnement annuel</span>
-              <span>14 juillet et Nouvel An</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <div class="callout">
+      <div class="callout" style="margin-top: 2rem;">
         <p style="margin: 0 0 0.6rem;">
           <strong style="color: var(--navy);">Abonnement annuel — Conseil à la décision,
           spectacles de drones</strong>
@@ -213,59 +197,3 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 </Layout>
-
-<style>
-  .offer-banner {
-    margin-top: 2rem;
-    overflow: hidden;
-    border: 1px solid var(--navy);
-    border-bottom: 0;
-    border-radius: var(--radius) var(--radius) 0 0;
-    background: var(--navy);
-    color: var(--white);
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-    animation: offer-banner-flash 6s steps(1, end) infinite;
-  }
-
-  .offer-banner__track {
-    display: flex;
-    width: max-content;
-    animation: offer-banner-scroll 28s linear infinite;
-  }
-
-  .offer-banner__group {
-    display: flex;
-    flex-shrink: 0;
-  }
-
-  .offer-banner__group > span {
-    padding: 0.65rem 1.5rem;
-  }
-
-  .offer-banner__group > span::after {
-    content: "•";
-    margin-left: 3rem;
-    color: var(--gold);
-  }
-
-  /* 3 s en bleu, 3 s en blanc */
-  @keyframes offer-banner-flash {
-    0% { background: var(--navy); color: var(--white); }
-    50% { background: var(--white); color: var(--navy); }
-  }
-
-  @keyframes offer-banner-scroll {
-    to { transform: translateX(-50%); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .offer-banner,
-    .offer-banner__track {
-      animation: none;
-    }
-  }
-</style>

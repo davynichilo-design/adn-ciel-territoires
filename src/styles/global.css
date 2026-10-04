@@ -216,6 +216,65 @@ img { max-width: 100%; display: block; }
   border-bottom: 3px solid var(--navy);
 }
 
+/* Bandeau d'offre : reste en haut avec l'en-tête, 3 s en bleu puis 3 s en blanc */
+.offer-banner {
+  display: block;
+  overflow: hidden;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-decoration: none;
+  border-bottom: 1px solid var(--navy);
+  animation: offer-banner-flash 6s steps(1, end) infinite;
+}
+
+/* a:hover passe le texte en bleu : illisible sur le fond bleu quand l'animation est coupée */
+a.offer-banner:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.offer-banner__track {
+  display: flex;
+  width: max-content;
+  animation: offer-banner-scroll 28s linear infinite;
+}
+
+.offer-banner__group {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.offer-banner__group > span {
+  padding: 0.5rem 1.5rem;
+}
+
+.offer-banner__group > span::after {
+  content: "•";
+  margin-left: 3rem;
+  color: var(--gold);
+}
+
+@keyframes offer-banner-flash {
+  0% { background: var(--navy); color: var(--white); }
+  50% { background: var(--white); color: var(--navy); }
+}
+
+@keyframes offer-banner-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offer-banner,
+  .offer-banner__track {
+    animation: none;
+  }
+}
+
 .site-header__inner {
   display: flex;
   align-items: center;
