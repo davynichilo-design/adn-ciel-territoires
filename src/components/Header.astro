@@ -21,18 +21,27 @@ const isCurrent = (href: string) =>
     class="offer-banner"
     aria-label="Offre de lancement 2026 : abonnement annuel à 490 € HT, pour le 14 juillet et le Nouvel An"
   >
-    <span class="offer-banner__track" aria-hidden="true">
-      {[0, 1].map(() => (
-        <span class="offer-banner__group">
-          <span>Offre de lancement 2026 — 490&nbsp;€ HT</span>
-          <span>Abonnement annuel</span>
-          <span>14 juillet et Nouvel An</span>
-          <span>Offre de lancement 2026 — 490&nbsp;€ HT</span>
-          <span>Abonnement annuel</span>
-          <span>14 juillet et Nouvel An</span>
-        </span>
-      ))}
+    <span class="offer-banner__tag" aria-hidden="true">
+      <span class="offer-banner__tag-long">Offre de lancement</span>
+      <span class="offer-banner__tag-short">Offre</span> 2026
     </span>
+    <span class="offer-banner__viewport" aria-hidden="true">
+      <span class="offer-banner__track">
+        {[0, 1].map(() => (
+          <span class="offer-banner__group">
+            <span>Abonnement annuel</span>
+            <span><b class="offer-banner__price">490&nbsp;€ HT</b></span>
+            <span>14 juillet et Nouvel An</span>
+            <span>Analyse indépendante de vos devis</span>
+            <span>Abonnement annuel</span>
+            <span><b class="offer-banner__price">490&nbsp;€ HT</b></span>
+            <span>14 juillet et Nouvel An</span>
+            <span>Analyse indépendante de vos devis</span>
+          </span>
+        ))}
+      </span>
+    </span>
+    <span class="offer-banner__cta" aria-hidden="true">Voir l'offre <span>→</span></span>
   </a>
   <div class="container site-header__inner">
     <a href="/" class="brand">
