@@ -1,5 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const certifications = [
+  { prefix: 'ISO', number: '31000', norm: 'ISO 31000', subject: 'Management du risque' },
+  { prefix: 'ISO', number: '22361', norm: 'ISO 22361', subject: 'Gestion de crise' },
+  {
+    prefix: 'ISO/IEC',
+    number: '42001',
+    norm: 'ISO/IEC 42001',
+    subject: "Système de management de l'intelligence artificielle",
+  },
+];
 ---
 
 <Layout
@@ -82,6 +92,38 @@ import Layout from '../layouts/Layout.astro';
           <p>Participation à la création d'une activité drone à Milan.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Certifications du gérant -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="text-center" style="max-width: 62ch; margin-inline: auto;">
+        <p class="badge">Certifications</p>
+        <h2>Trois certifications obtenues</h2>
+        <p class="lede" style="margin-inline: auto;">
+          Le gérant de la structure est certifié sur trois normes internationales, qui
+          portent sur le risque, la crise et l'intelligence artificielle.
+        </p>
+      </div>
+
+      <div class="grid grid--3" style="margin-top: 2.5rem;">
+        {certifications.map((c) => (
+          <div class="card card--centered card--accent-top">
+            <div class="cert-badge" aria-hidden="true">
+              <span class="cert-badge__label">{c.prefix}</span>
+              <span class="cert-badge__number">{c.number}</span>
+            </div>
+            <h4>{c.norm}</h4>
+            <p>{c.subject}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center" style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--gray-600);">
+        Ces certifications sont personnelles : elles attestent des compétences du gérant, et
+        non d'une certification de la structure.
+      </p>
     </div>
   </section>
 
@@ -194,3 +236,35 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 </Layout>
+
+<style>
+  /* Médaillon aux couleurs du site : ce n'est pas le logo d'un organisme */
+  .cert-badge {
+    width: 104px;
+    height: 104px;
+    margin: 0 auto 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--gold);
+    font-family: var(--font-display);
+    line-height: 1;
+  }
+
+  .cert-badge__label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--gold-tint);
+  }
+
+  .cert-badge__number {
+    font-size: 1.45rem;
+    font-weight: 800;
+  }
+</style>
