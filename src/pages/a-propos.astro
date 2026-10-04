@@ -44,8 +44,52 @@ const certifications = [
     </div>
   </section>
 
-  <!-- 2. Parcours + repères -->
+  <!-- Certifications du gérant -->
   <section class="section">
+    <div class="container">
+      <div class="text-center" style="max-width: 62ch; margin-inline: auto;">
+        <p class="badge">Certifications</p>
+        <h2>Trois certifications obtenues</h2>
+        <p class="lede" style="margin-inline: auto;">
+          Le gérant de la structure est certifié par PECB sur trois normes internationales,
+          qui portent sur le risque, la crise et l'intelligence artificielle.
+        </p>
+      </div>
+
+      <div class="grid grid--3" style="margin-top: 2.5rem;">
+        {certifications.map((c) => (
+          <div class="card card--centered card--accent-top">
+            {c.badge ? (
+              <img
+                class="cert-badge-img"
+                src={c.badge}
+                alt={`Badge PECB ${c.title}`}
+                width="480"
+                height="483"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <div class="cert-badge" aria-hidden="true">
+                <span class="cert-badge__label">{c.prefix}</span>
+                <span class="cert-badge__number">{c.number}</span>
+              </div>
+            )}
+            <h4>{c.title}</h4>
+            <p>{c.norm ? `${c.norm} — ${c.subject}` : c.subject}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center" style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--gray-600);">
+        Ces certifications sont personnelles : elles attestent des compétences du gérant, et
+        non d'une certification de la structure.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. Parcours + repères -->
+  <section class="section" style="padding-top: 0;">
     <div class="container container--narrow stack">
       <p>
         Le gérant de la structure accompagne depuis 2020 des professionnels dans la compréhension et la
@@ -103,50 +147,6 @@ const certifications = [
           <p>Participation à la création d'une activité drone à Milan.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Certifications du gérant -->
-  <section class="section" style="padding-top: 0;">
-    <div class="container">
-      <div class="text-center" style="max-width: 62ch; margin-inline: auto;">
-        <p class="badge">Certifications</p>
-        <h2>Trois certifications obtenues</h2>
-        <p class="lede" style="margin-inline: auto;">
-          Le gérant de la structure est certifié par PECB sur trois normes internationales,
-          qui portent sur le risque, la crise et l'intelligence artificielle.
-        </p>
-      </div>
-
-      <div class="grid grid--3" style="margin-top: 2.5rem;">
-        {certifications.map((c) => (
-          <div class="card card--centered card--accent-top">
-            {c.badge ? (
-              <img
-                class="cert-badge-img"
-                src={c.badge}
-                alt={`Badge PECB ${c.title}`}
-                width="480"
-                height="483"
-                loading="lazy"
-                decoding="async"
-              />
-            ) : (
-              <div class="cert-badge" aria-hidden="true">
-                <span class="cert-badge__label">{c.prefix}</span>
-                <span class="cert-badge__number">{c.number}</span>
-              </div>
-            )}
-            <h4>{c.title}</h4>
-            <p>{c.norm ? `${c.norm} — ${c.subject}` : c.subject}</p>
-          </div>
-        ))}
-      </div>
-
-      <p class="text-center" style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--gray-600);">
-        Ces certifications sont personnelles : elles attestent des compétences du gérant, et
-        non d'une certification de la structure.
-      </p>
     </div>
   </section>
 
