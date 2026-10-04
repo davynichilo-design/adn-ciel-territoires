@@ -217,16 +217,17 @@ img { max-width: 100%; display: block; }
 }
 
 /* Bandeau d'offre : reste en haut avec l'en-tête, 3 s en bleu puis 3 s en blanc.
-   Toutes les animations de couleur durent 6 s pour rester synchronisées. */
+   Registre institutionnel : aplats, filets or, angles droits, pas d'effet brillant.
+   Les animations de couleur durent toutes 6 s pour rester synchronisées. */
 .offer-banner {
   display: flex;
   align-items: stretch;
   overflow: hidden;
   background: var(--navy);
   color: var(--white);
-  border-bottom: 2px solid var(--gold);
-  font-family: var(--font-display);
-  font-weight: 600;
+  border-bottom: 1px solid var(--gold);
+  font-family: var(--font-body);
+  font-weight: 500;
   font-size: 0.9rem;
   line-height: 1;
   white-space: nowrap;
@@ -240,53 +241,42 @@ a.offer-banner:hover {
   text-decoration: none;
 }
 
-/* Étiquette fixe à gauche, en or, avec un reflet qui la traverse */
+/* Cartouche fixe à gauche : même aspect sur fond bleu et sur fond blanc */
 .offer-banner__tag {
-  position: relative;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 0.35em;
-  overflow: hidden;
-  padding: 0.7rem 2rem 0.7rem clamp(1rem, 3vw, 2rem);
-  background: var(--gold);
-  color: var(--navy-ink);
-  font-weight: 800;
-  font-size: 0.75rem;
-  letter-spacing: 0.09em;
+  padding: 0.7rem 1.25rem 0.7rem clamp(1rem, 3vw, 2rem);
+  background: var(--navy-ink);
+  color: var(--white);
+  border-right: 3px solid var(--gold);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0 100%);
-}
-
-.offer-banner__tag::after {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 40%;
-  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
-  transform: translateX(-120%);
-  animation: offer-banner-shine 3s ease-in-out infinite;
 }
 
 .offer-banner__tag-short {
   display: none;
 }
 
-/* Zone de défilement, estompée sur les bords */
 .offer-banner__viewport {
   flex: 1;
   min-width: 0;
   display: flex;
   align-items: center;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 1.5rem, #000 calc(100% - 1.5rem), transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 1.5rem, #000 calc(100% - 1.5rem), transparent);
 }
 
+/* Défilement de la gauche vers la droite */
 .offer-banner__track {
   display: flex;
   width: max-content;
-  animation: offer-banner-scroll 32s linear infinite;
+  animation: offer-banner-scroll 40s linear infinite reverse;
 }
 
 .offer-banner:hover .offer-banner__track {
@@ -301,26 +291,24 @@ a.offer-banner:hover {
 .offer-banner__group > span {
   display: flex;
   align-items: center;
-  padding-left: 2.25rem;
+  padding-left: 2rem;
 }
 
-/* Séparateur : losange or */
+/* Séparateur : filet vertical or */
 .offer-banner__group > span::after {
   content: "";
-  width: 0.4rem;
-  height: 0.4rem;
-  margin-left: 2.25rem;
+  width: 1px;
+  height: 1rem;
+  margin-left: 2rem;
   background: var(--gold);
-  transform: rotate(45deg);
 }
 
 .offer-banner__price {
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  background: var(--gold);
-  color: var(--navy-ink);
-  font-weight: 800;
-  animation: offer-banner-price 6s ease-in-out infinite;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-weight: 700;
 }
 
 .offer-banner__cta {
@@ -328,13 +316,11 @@ a.offer-banner:hover {
   display: flex;
   align-items: center;
   gap: 0.4em;
-  padding: 0 clamp(1rem, 3vw, 2rem) 0 1rem;
+  padding: 0 clamp(1rem, 3vw, 2rem) 0 1.25rem;
+  border-left: 1px solid var(--gold);
+  font-family: var(--font-display);
   font-size: 0.8rem;
   font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--gold);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
 }
 
 .offer-banner__cta span {
@@ -351,18 +337,6 @@ a.offer-banner:hover {
   100% { background: var(--navy); color: var(--white); }
 }
 
-/* Le prix reste lisible sur les deux fonds : or sur bleu, bleu sur blanc */
-@keyframes offer-banner-price {
-  0%, 45% { background: var(--gold); color: var(--navy-ink); }
-  50%, 95% { background: var(--navy); color: var(--white); }
-  100% { background: var(--gold); color: var(--navy-ink); }
-}
-
-@keyframes offer-banner-shine {
-  0%, 55% { transform: translateX(-120%); }
-  100% { transform: translateX(320%); }
-}
-
 @keyframes offer-banner-scroll {
   to { transform: translateX(-50%); }
 }
@@ -372,14 +346,11 @@ a.offer-banner:hover {
   .offer-banner__tag-long,
   .offer-banner__cta { display: none; }
   .offer-banner__tag-short { display: inline; }
-  .offer-banner__tag { padding-right: 1.6rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .offer-banner,
-  .offer-banner__track,
-  .offer-banner__price,
-  .offer-banner__tag::after {
+  .offer-banner__track {
     animation: none;
   }
 }
