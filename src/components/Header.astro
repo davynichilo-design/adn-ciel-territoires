@@ -29,14 +29,12 @@ const isCurrent = (href: string) =>
       <span class="offer-banner__track">
         {[0, 1].map(() => (
           <span class="offer-banner__group">
-            <span>Abonnement annuel</span>
-            <span><b class="offer-banner__price">490&nbsp;€ HT</b></span>
-            <span>14 juillet et Nouvel An</span>
-            <span>Analyse indépendante de vos devis</span>
-            <span>Abonnement annuel</span>
-            <span><b class="offer-banner__price">490&nbsp;€ HT</b></span>
-            <span>14 juillet et Nouvel An</span>
-            <span>Analyse indépendante de vos devis</span>
+            {[0, 1, 2].map(() => (
+              <span>
+                Vos devis analysés pour le&nbsp;<b>14&nbsp;juillet</b>&nbsp;et le&nbsp;<b>Nouvel&nbsp;An</b>
+                &nbsp;:&nbsp;<b class="offer-banner__price">490&nbsp;€ HT</b>&nbsp;par an
+              </span>
+            ))}
           </span>
         ))}
       </span>

@@ -276,7 +276,7 @@ a.offer-banner:hover {
 .offer-banner__track {
   display: flex;
   width: max-content;
-  animation: offer-banner-scroll 40s linear infinite reverse;
+  animation: offer-banner-scroll 45s linear infinite reverse;
 }
 
 .offer-banner:hover .offer-banner__track {
@@ -294,21 +294,33 @@ a.offer-banner:hover {
   padding-left: 2rem;
 }
 
-/* Séparateur : filet vertical or */
+/* Séparateur entre deux répétitions de la phrase : losange or */
 .offer-banner__group > span::after {
   content: "";
-  width: 1px;
-  height: 1rem;
+  width: 0.4rem;
+  height: 0.4rem;
   margin-left: 2rem;
   background: var(--gold);
+  transform: rotate(45deg);
+}
+
+/* Points mis en évidence dans la phrase */
+.offer-banner__group b {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.offer-banner__group b:not(.offer-banner__price) {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
 }
 
 .offer-banner__price {
   padding: 0.3rem 0.6rem;
   border: 1px solid var(--gold);
   border-radius: var(--radius);
-  font-family: var(--font-display);
-  font-weight: 700;
 }
 
 .offer-banner__cta {
