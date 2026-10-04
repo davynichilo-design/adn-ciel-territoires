@@ -1,12 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const certifications = [
-  { prefix: 'ISO', number: '31000', norm: 'ISO 31000', subject: 'Management du risque' },
-  { prefix: 'ISO', number: '22361', norm: 'ISO 22361', subject: 'Gestion de crise' },
   {
+    badge: '/images/pecb-iso-31000-lead-risk-manager.webp',
+    title: 'Lead Risk Manager',
+    norm: 'ISO 31000',
+    subject: 'Management du risque',
+  },
+  {
+    badge: '/images/pecb-iso-22361-lead-crisis-manager.webp',
+    title: 'Lead Crisis Manager',
+    norm: 'ISO 22361',
+    subject: 'Gestion de crise',
+  },
+  {
+    // Badge PECB non encore fourni : médaillon provisoire
     prefix: 'ISO/IEC',
     number: '42001',
-    norm: 'ISO/IEC 42001',
+    title: 'ISO/IEC 42001',
     subject: "Système de management de l'intelligence artificielle",
   },
 ];
@@ -110,12 +121,24 @@ const certifications = [
       <div class="grid grid--3" style="margin-top: 2.5rem;">
         {certifications.map((c) => (
           <div class="card card--centered card--accent-top">
-            <div class="cert-badge" aria-hidden="true">
-              <span class="cert-badge__label">{c.prefix}</span>
-              <span class="cert-badge__number">{c.number}</span>
-            </div>
-            <h4>{c.norm}</h4>
-            <p>{c.subject}</p>
+            {c.badge ? (
+              <img
+                class="cert-badge-img"
+                src={c.badge}
+                alt={`Badge PECB ${c.title}`}
+                width="480"
+                height="483"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <div class="cert-badge" aria-hidden="true">
+                <span class="cert-badge__label">{c.prefix}</span>
+                <span class="cert-badge__number">{c.number}</span>
+              </div>
+            )}
+            <h4>{c.title}</h4>
+            <p>{c.norm ? `${c.norm} — ${c.subject}` : c.subject}</p>
           </div>
         ))}
       </div>
@@ -238,11 +261,17 @@ const certifications = [
 </Layout>
 
 <style>
+  .cert-badge-img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto 1rem;
+  }
+
   /* Médaillon aux couleurs du site : ce n'est pas le logo d'un organisme */
   .cert-badge {
     width: 104px;
     height: 104px;
-    margin: 0 auto 1.1rem;
+    margin: 23px auto calc(1rem + 24px);
     display: flex;
     flex-direction: column;
     align-items: center;
