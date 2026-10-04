@@ -28,3 +28,6 @@ npm-debug.log*
 
 # configuration locale Claude Code (spécifique à cette machine)
 .claude/
+
+# fichier de prospection (donnees de contact, ne doit pas partir sur GitHub)
+/prospection/

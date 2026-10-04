@@ -3,36 +3,54 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Accompagnement des collectivités"
-  description="Qualification du besoin, recherche d'opérateurs, vérification préliminaire et comparatif structuré : le contenu de l'accompagnement proposé aux collectivités."
+  title="Conseil à la décision"
+  description="Vous avez reçu vos propositions de spectacle de drones. Nous les analysons : autorisations exigibles, sécurité du public, écarts entre les offres. Un avis indépendant avant votre choix."
   path="/accompagnement-collectivites/"
 >
   <!-- 1. Intro -->
   <section class="hero" style="padding-block: clamp(2.5rem, 4vw, 4rem);">
     <div class="container container--narrow text-center">
-      <p class="badge" style="justify-content: center;">Accompagnement des collectivités</p>
-      <h1>Comment nous accompagnons votre collectivité</h1>
+      <p class="badge" style="justify-content: center;">Conseil à la décision</p>
+      <h1>Vos propositions sont arrivées. Laquelle tient vraiment ?</h1>
       <p class="lede" style="margin-inline: auto;">
-        Une mairie ou une collectivité qui envisage un spectacle de drones fait face à un
-        marché technique encore peu connu. Notre rôle est de vous aider à qualifier votre
-        besoin, rechercher des opérateurs adaptés et comparer leurs propositions selon des
-        critères objectifs.
+        Vous avez consulté des opérateurs de spectacles de drones et reçu leurs propositions.
+        Elles se ressemblent, et rien ne permet, de l'extérieur, de dire laquelle a
+        réellement traité les autorisations et la sécurité du public. C'est à ce
+        moment-là, et à ce moment-là seulement, que nous intervenons.
       </p>
       <div class="button-row" style="margin-top: 1.8rem; justify-content: center;">
-        <a href="/contact/" class="button button--primary">Étudier mon projet</a>
+        <a href="/contact/" class="button button--primary">Soumettre mes propositions</a>
         <a href="#contenu-accompagnement" class="button button--secondary">Voir le contenu détaillé</a>
       </div>
     </div>
   </section>
 
-  <!-- 2. Pour qui -->
+  <!-- 2. Le moment où nous intervenons -->
   <section class="section">
+    <div class="container container--narrow">
+      <p class="badge">Le périmètre</p>
+      <h2>Nous ne cherchons pas d'opérateur à votre place</h2>
+      <p class="lede">
+        La consultation reste la vôtre : vous choisissez qui vous interrogez, vous recevez les
+        réponses, vous contractualisez. Notre travail commence quand les propositions sont sur
+        la table, et s'arrête au moment où vous décidez.
+      </p>
+      <p style="margin-top: 1.2rem;">
+        Ce positionnement est délibéré. N'ayant sollicité aucun opérateur et n'en attendant
+        aucune rémunération, nous n'avons rien à défendre dans les propositions que vous nous
+        transmettez — y compris celle qui vous semblait la meilleure.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Pour qui -->
+  <section class="section section--tint">
     <div class="container">
       <div class="text-center" style="max-width: 62ch; margin-inline: auto;">
         <p class="badge">Public concerné</p>
         <h2>Pour qui ?</h2>
         <p class="lede" style="margin-inline: auto;">
-          Chaque interlocuteur trouve dans notre dossier les éléments qui répondent à ses
+          Chaque interlocuteur trouve dans notre analyse les éléments qui répondent à ses
           préoccupations propres.
         </p>
       </div>
@@ -88,71 +106,98 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- 3. Ce que comprend l'accompagnement -->
-  <section class="section section--tint" id="contenu-accompagnement">
+  <!-- 4. Ce que comprend l'analyse -->
+  <section class="section" id="contenu-accompagnement">
     <div class="container">
       <div class="text-center" style="max-width: 62ch; margin-inline: auto;">
-        <p class="badge">Contenu du forfait</p>
-        <h2>Ce que comprend l'accompagnement</h2>
+        <p class="badge">Contenu de l'abonnement</p>
+        <h2>Ce que comprend l'analyse</h2>
         <p class="lede" style="margin-inline: auto;">
-          Cinq étapes structurées, du premier échange jusqu'au comparatif remis à votre
-          collectivité.
+          Cinq étapes, de la réception de vos propositions jusqu'à l'avis motivé remis à
+          votre collectivité.
         </p>
       </div>
 
       <div class="steps steps--3col" style="margin-top: 2.5rem;">
         <div class="steps__item">
-          <h4>Qualification du besoin</h4>
-          <p>Date, lieu, budget, objectifs, contraintes.</p>
+          <h4>Réception de vos propositions</h4>
+          <p>Vous transmettez les offres reçues, telles que les opérateurs vous les ont adressées.</p>
         </div>
         <div class="steps__item">
-          <h4>Premier examen des contraintes évidentes du site</h4>
-          <p>Il ne s'agit pas d'une étude réglementaire exhaustive.</p>
+          <h4>Application d'une grille de vérification</h4>
+          <p>Les mêmes points de contrôle, appliqués à chaque proposition sans exception.</p>
         </div>
         <div class="steps__item">
-          <h4>Recherche d'opérateurs adaptés au projet</h4>
-          <p>Une sélection ciblée en fonction des caractéristiques de votre événement.</p>
+          <h4>Contrôle des autorisations</h4>
+          <p>Ce que l'opérateur doit produire pour votre site et votre date, et ce qui manque à sa proposition.</p>
         </div>
         <div class="steps__item">
-          <h4>Vérification préliminaire des éléments communiqués</h4>
-          <p>Références, assurances, organisation.</p>
+          <h4>Examen de la sécurité du public</h4>
+          <p>Zones, distances, dispositifs annoncés et moyens de repli : ce qui est prévu, et ce qui ne l'est pas.</p>
         </div>
         <div class="steps__item">
-          <h4>Remise d'un comparatif structuré</h4>
-          <p>Une lecture claire pour éclairer votre décision.</p>
+          <h4>Remise d'un avis motivé</h4>
+          <p>Les écarts entre les offres, les points à confirmer, et notre lecture du choix qui se présente.</p>
         </div>
+      </div>
+
+      <div class="container container--narrow" style="margin-top: 2.5rem; padding-inline: 0;">
+        <p>
+          <strong style="color: var(--navy);">La grille de vérification vous est communiquée
+          avant l'analyse.</strong> Vous savez donc exactement ce qui sera contrôlé, et sur
+          quoi l'avis se fondera. Elle peut être ajustée à la marge pour tenir compte
+          d'exigences propres à votre collectivité, dans une limite convenue au départ.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- 4. Ce que ça ne comprend pas + tarif -->
-  <section class="section">
+  <!-- 5. Ce que ça ne comprend pas + tarif -->
+  <section class="section section--tint">
     <div class="container container--narrow">
-      <h2>Ce que cet accompagnement ne comprend pas</h2>
+      <h2>Ce que cette analyse ne comprend pas</h2>
       <p>
-        Une analyse réglementaire exhaustive (type SORA), la responsabilité d'exploitant, ou
-        la garantie d'obtention des autorisations : ces éléments relèvent de l'opérateur
-        retenu, éventuellement accompagné séparément.
+        La recherche d'opérateurs : la consultation reste la vôtre. Pas davantage une analyse
+        réglementaire exhaustive de type SORA, la responsabilité d'exploitant, ni la garantie
+        d'obtention des autorisations — ces éléments relèvent de l'opérateur retenu.
+      </p>
+      <p style="margin-top: 1rem;">
+        L'avis remis éclaire votre décision ; il ne s'y substitue pas. Le choix, la
+        négociation et la contractualisation restent intégralement les vôtres.
       </p>
 
       <div class="callout" style="margin-top: 2rem;">
-        <p style="margin: 0 0 1rem;">
-          <strong style="color: var(--navy);">Forfait Présélection Spectacle Drone</strong>
-          — 490&nbsp;€ HT
+        <p style="margin: 0 0 0.6rem;">
+          <strong style="color: var(--navy);">Abonnement annuel — Conseil à la décision,
+          spectacles de drones</strong>
         </p>
-        <a href="/contact/" class="button button--primary">Étudier mon projet</a>
+        <p style="margin: 0 0 0.6rem; font-size: 0.95rem;">
+          Couvre l'analyse de vos propositions pour <strong>le 14 juillet</strong> et pour
+          <strong>le Nouvel An</strong>, sur l'année.
+        </p>
+        <p style="margin: 0 0 1rem;">
+          <strong style="color: var(--gold-ink);">Offre de lancement 2026 — 490&nbsp;€ HT</strong>
+        </p>
+        <p style="margin: 0 0 1rem; font-size: 0.9rem; color: var(--gray-600);">
+          À ce niveau de dépense, l'achat relève des marchés de faible montant : dispense de
+          publicité et de mise en concurrence préalables sous 40 000 € HT
+          (art. R. 2122-8 du code de la commande publique), sous réserve de vos règles
+          internes. Un bon de commande, une facture.
+        </p>
+        <a href="/contact/" class="button button--primary">Soumettre mes propositions</a>
       </div>
     </div>
   </section>
 
-  <!-- 5. CTA -->
+  <!-- 6. CTA -->
   <section class="section section--navy">
     <div class="container text-center" style="max-width: 62ch; margin-inline: auto;">
-      <h2>Prêt à qualifier votre projet ?</h2>
+      <h2>Vos propositions sont sur la table ?</h2>
       <p style="color: #c3d6e6;">
-        Présentez-nous votre projet pour évaluer, ensemble, l'accompagnement envisageable.
+        Décrivez votre événement et les offres que vous avez reçues. Nous vous indiquons ce
+        que l'analyse peut apporter à votre décision.
       </p>
-      <a href="/contact/" class="button button--on-navy" style="margin-top: 1rem;">Présenter votre projet</a>
+      <a href="/contact/" class="button button--on-navy" style="margin-top: 1rem;">Nous écrire</a>
     </div>
   </section>
 </Layout>
